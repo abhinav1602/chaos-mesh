@@ -94,7 +94,7 @@ int main(void) {
 	int ret;
 	while (1) {
 		ret = mount("/dev/sdc", "/mnt", "ext4",
-			    MS_MGC_VAL | MS_RDONLY | MS_NOSUID, "");
+			           MS_MGC_VAL | MS_RDONLY | MS_NOSUID, "");
 		if (ret < 0)
 			fprintf(stderr, "%s\n", strerror(errno));
 		sleep(1);
